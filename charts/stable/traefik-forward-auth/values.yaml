@@ -4,9 +4,9 @@
 replicaCount: 1
 
 image:
-  repository: thomseddon/traefik-forward-auth
+  repository: mesosphere/traefik-forward-auth
   pullPolicy: IfNotPresent
-  tag: ""
+  tag: "3.0.2"
 
 imagePullSecrets: []
 nameOverride: ""
