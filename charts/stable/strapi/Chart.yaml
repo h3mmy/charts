@@ -1,0 +1,29 @@
+apiVersion: v2
+appVersion: 3.6.8
+description: strapi is a blogging and publishing software
+name: strapi
+version: 1.2.0
+kubeVersion: ">=1.19.0-0"
+keywords:
+  - strapi
+  - blogging
+home: https://github.com/k8s-at-home/charts/tree/master/charts/stable/strapi
+icon: https://strapi.org/images/logos/logo-black-1.png
+sources:
+  - https://github.com/strapi/
+  - https://github.com/strapi/strapi-docker
+maintainers:
+  - name: h3mmy
+    email: h3mmy@users.no-reply.github.com
+dependencies:
+  - name: common
+    repository: https://library-charts.k8s-at-home.com
+    version: 4.3.0
+  - name: mariadb
+    version: 10.2.0
+    repository: https://charts.bitnami.com/bitnami
+    condition: mariadb.enabled
+annotations:
+  artifacthub.io/changes: |
+    - kind: changed
+      description: Upgrade `appversion` from 4.27.2 to 4.37.0.
