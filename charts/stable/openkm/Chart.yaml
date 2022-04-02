@@ -2,7 +2,7 @@ apiVersion: v2
 appVersion: 1.0.0
 description: OpenKM integrates all essential documents management, collaboration and an advanced search functionality into one easy to use solution.
 name: openkm
-version: 3.1.0
+version: 3.1.1
 kubeVersion: ">=1.16.0-0"
 keywords:
   - openkm
@@ -25,7 +25,7 @@ dependencies:
     repository: https://charts.bitnami.com/bitnami
     condition: postgresql.enabled
   - name: mariadb
-    version: 10.4.4
+    version: 10.4.5
     repository: https://charts.bitnami.com/bitnami
     condition: mariadb.enabled
 annotations:
