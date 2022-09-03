@@ -3,7 +3,7 @@ apiVersion: v2
 appVersion: version-5.6.14
 description: "Firefly III: a personal finances manager"
 name: firefly-iii
-version: 0.2.2
+version: 0.3.0
 kubeVersion: ">=1.16.0-0"
 keywords:
   - firefly-iii
@@ -20,11 +20,11 @@ dependencies:
     repository: https://library-charts.k8s-at-home.com
     version: 4.5.2
   - name: mariadb
-    version: 11.0.2
+    version: 11.2.2
     repository: https://charts.bitnami.com/bitnami
     condition: mariadb.enabled
   - name: postgresql
-    version: 11.6.12
+    version: 11.8.1
     repository: https://charts.bitnami.com/bitnami
     condition: postgresql.enabled
   - name: redis
@@ -34,4 +34,6 @@ dependencies:
 annotations:
   artifacthub.io/changes: |-
     - kind: changed
-      description: Upgraded `common` chart dependency to version 4.5.2
+      description: Upgraded `mariadb` chart dependency to version 11.2.2
+    - kind: changed
+      description: Upgraded `postgresql` chart dependency to version 11.8.1
